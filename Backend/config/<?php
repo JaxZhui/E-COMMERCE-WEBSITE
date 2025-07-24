@@ -1,0 +1,3 @@
+<?php
+// In your ProductResource or upload handler
+$product->image = $request->file('image')->store('products', 'public');
