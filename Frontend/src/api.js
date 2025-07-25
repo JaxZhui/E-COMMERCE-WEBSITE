@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://10.119.27.90:3000/api/v1';
+const API_BASE_URL = 'http://10.119.27.90:8000/api/v1';
 
 class api {
   async fetchCategories() {
