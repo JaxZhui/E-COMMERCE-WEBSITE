@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Widgets;
+namespace App\Filament\Resources\ContactResource\Widgets;
 
 use App\Models\Contact;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
