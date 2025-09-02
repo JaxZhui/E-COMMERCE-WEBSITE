@@ -8,23 +8,17 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::table('contacts', function (Blueprint $table) {
-            if (!Schema::hasColumn('contacts', 'name')) {
-                $table->string('name');
-            }
-            if (!Schema::hasColumn('contacts', 'email')) {
-                $table->string('email');
-            }
-            if (!Schema::hasColumn('contacts', 'message')) {
-                $table->text('message');
-            }
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->text('message');
+            $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::table('contacts', function (Blueprint $table) {
-            $table->dropColumn(['name', 'email', 'message']);
-        });
+        Schema::dropIfExists('contacts');
     }
 };
